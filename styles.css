@@ -1,0 +1,304 @@
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+    --blue: rgb(24,146,211);
+    --yellow: rgb(240,182,48);
+    --lightgrey: rgb(226,232,240);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    object-fit: contain;
+}
+
+svg {
+    fill: white;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20vw 4fr;
+    grid-template-rows: 20vh 4fr;
+}
+
+.sidebar {
+    background-color: var(--blue);
+    position: fixed;
+    height: 100vh;
+    width: 20vw;
+    color: white;
+    padding: 0px 40px;
+    grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 2fr 6fr 7fr;
+}
+
+.sidebar h2 {
+    margin: 10px;
+}
+
+.logo {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr;
+    gap: 10px;
+}
+
+.logo svg {
+    height: 55px;
+    width: 55px;
+    margin: auto;
+}
+
+.main-nav li {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+.main-nav svg {
+    height: 30px;
+    width: 30px;
+    margin: auto;
+}
+
+.settings-nav li {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+.settings-nav svg {
+    height: 30px;
+    width: 30px;
+    margin: auto;
+}
+
+.main {
+    background-color: var(--lightgrey);
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 30px;
+    padding: 0 30px 50px;
+}
+
+.header {
+    background-color: white;
+    padding: 10px 50px;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+
+}
+
+.search .search-bar {
+    display: flex;
+    gap: 15px;
+}
+
+.search svg {
+    height: 30px;
+    width: 30px;
+    fill: black;
+}
+
+input[type="search"] {
+    width: 43vw;
+    height: 35px;
+    background-color: var(--lightgrey);
+    border: none;
+    border-radius: 20px;
+}
+
+input[type="search"]:focus {
+    border: none;
+    outline: none;
+}
+
+.account {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 40px;
+}
+
+.user-panel {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.greeting h4 {
+    margin-bottom: 6px;
+}
+
+.greeting h2 {
+    margin-top: 0;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-buttons button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--blue);
+    color: white;
+    width: 120px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .projects h2 {
+    margin: 0 0 15px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 30px;
+    flex-grow: 1;
+  }
+
+.card {
+    background-color: white;
+    border-left: 9px solid var(--yellow);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .buttons {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.card svg {
+    height: 30px;
+    width: 30px;
+    fill: black;
+}
+
+.main h2 {
+    margin: 40px 0 15px;
+}
+
+.announcements {
+    background-color: white;
+    padding: 30px 40px;
+    height: fit-content;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.announcement {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.announcement:not(:first-child) {
+    border-top: 1px solid grey;
+}
+
+.announcement h4 {
+    margin-bottom: 0;
+}
+
+.announcement p {
+    margin-top: 5px;
+    color: grey;
+}
+
+.trending {
+    background-color: white;
+    padding: 10px 20px;
+    height: fit-content;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.trend img {
+    grid-column: 1 / 2;
+    height: 75px;
+    margin: auto;
+}
+
+.trend h4 {
+    margin-bottom: 0;
+}
+
+.trend p {
+    margin-top: 5px;
+    color: grey;
+}
+
+.trend div {
+    margin: 5px 0;
+}
+
+.card h3 {
+    margin-bottom: 0;
+}
+
+.card p {
+    margin-top: 5px;
+    padding-right: 15%;
+    color: grey;
+}
